@@ -11,11 +11,13 @@ const ignoreURLs = format((info, _) => {
     '/.backstage/health/v1/liveness',
     '/.backstage/health/v1/readiness',
   ];
+
   if (
-    String(info?.service) === 'rootHttpRouter' &&
-    String(info?.type) === 'incomingRequest' &&
+    info?.service === 'rootHttpRouter' &&
+    info?.type === 'incomingRequest' &&
     ignoreUrls.some(url => String(info?.url).includes(url))
-  ) return false;
+  )
+    return false;
 
   return info;
 });
@@ -38,10 +40,7 @@ export const loggerService = createServiceFactory({
       },
       level: process.env.LOG_LEVEL || 'info',
       transports: [new transports.Console()],
-      format: format.combine(
-        ignoreURLs(),
-        loggerFormat()
-      ),
+      format: format.combine(ignoreURLs(), loggerFormat()),
     });
 
     const secretEnumerator = await createConfigSecretEnumerator({ logger });
