@@ -6,6 +6,25 @@ import { WinstonLogger } from '@backstage/backend-defaults/rootLogger';
 import { createConfigSecretEnumerator } from '@backstage/backend-defaults/rootConfig';
 import { transports, format } from 'winston';
 
+const ignoreURLs = format((info, _) => {
+  const ignoreUrls = [
+    '/.backstage/health/v1/liveness',
+    '/.backstage/health/v1/readiness',
+  ];
+  if (
+    String(info?.service) === 'rootHttpRouter' &&
+    String(info?.type) === 'incomingRequest' &&
+    ignoreUrls.some(url => String(info?.url).includes(url))
+  ) return false;
+
+  return info;
+});
+
+const loggerFormat =
+  process.env.NODE_ENV === 'production'
+    ? format.json
+    : WinstonLogger.colorFormat;
+
 export const loggerService = createServiceFactory({
   service: coreServices.rootLogger,
   deps: {
@@ -19,10 +38,10 @@ export const loggerService = createServiceFactory({
       },
       level: process.env.LOG_LEVEL || 'info',
       transports: [new transports.Console()],
-      format:
-        process.env.NODE_ENV === 'production'
-          ? format.json()
-          : WinstonLogger.colorFormat(),
+      format: format.combine(
+        ignoreURLs(),
+        loggerFormat()
+      ),
     });
 
     const secretEnumerator = await createConfigSecretEnumerator({ logger });
