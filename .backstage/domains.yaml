@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: company
+  title: My Company
+spec:
+  owner: group:default/guests

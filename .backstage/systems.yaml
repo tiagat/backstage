@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: argocd
+  title: ArgoCD
+spec:
+  owner: group:default/guests
+  domain: domain:default/company
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: github
+  title: GitHub
+spec:
+  owner: group:default/guests
+  domain: domain:default/company
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: kubernetes
+  title: Kubernetes
+spec:
+  owner: group:default/guests
+  domain: domain:default/company
