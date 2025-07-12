@@ -1,0 +1,26 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:14.18-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    networks:
+      - backstage
+  
+  redis:
+    container_name: redis
+    image: redis:8.0.2-alpine
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - goreel
+
+networks:
+  backstage:
+    name: goreel
+    driver: bridge
