@@ -16,16 +16,16 @@
     - [installing as a Homebrew Cask](https://docs.orbstack.dev/quick-start) 
 
 
-## Run the Backstage
+## Getting Started
 
-Install dependencies: 
+To start using Backstage, see the [Getting Started documentation](https://backstage.io/docs/getting-started).
 
-```bash
-yarn install
-```
+## Documentation
 
-Run the Backstage:
+The documentation of Backstage includes:
 
-```bash
-yarn start
-```
+- [Main documentation](https://backstage.io/docs)
+- [Software Catalog](https://backstage.io/docs/features/software-catalog/)
+- [Architecture (Decisions)](https://backstage.io/docs/overview/architecture-overview)
+- [Designing for Backstage](https://backstage.io/docs/dls/design)
+- [Storybook - UI components](https://backstage.io/storybook)
