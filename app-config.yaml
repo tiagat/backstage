@@ -87,7 +87,7 @@ catalog:
   locations:
     # Local catalog data, replace this with your production config, these are intended for demo use only.
     - type: file
-      target: ../../.backstage/*.yaml
+      target: ../../catalog/*.yaml
       rules:
         - allow: [API, Component, Domain, Group, Resource, System, User]
 
