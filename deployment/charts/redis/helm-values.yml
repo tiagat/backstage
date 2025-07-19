@@ -1,8 +1,8 @@
 architecture: standalone
-# auth:
-#   enabled: true
-#   existingSecret: 'env-redis'
-#   existingSecretPasswordKey: REDIS_PASSWORD
+auth:
+  enabled: true
+  existingSecret: 'redis-credentials'
+  existingSecretPasswordKey: REDIS_PASSWORD
 master:
   resources:
     requests:

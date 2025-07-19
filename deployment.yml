@@ -1,2 +1,9 @@
 deployments:
   - include: deployment
+
+vars:
+  - systemEnvVars:
+      REDIS_USERNAME: REDIS_USERNAME
+      REDIS_PASSWORD: REDIS_PASSWORD
+      REDIS_HOST: REDIS_HOST
+      REDIS_PORT: REDIS_PORT

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "cluster:create": "kind create cluster --config kind-sandbox.yaml",
-    "cluster:deploy": "kluctl helm-pull && kluctl deploy -t kind --yes",
+    "cluster:deploy": "kluctl helm-pull && kluctl deploy -t kind --prune --yes",
     "cluster:start": "yarn cluster:create && yarn cluster:deploy",
     "cluster:stop": "kind delete cluster --name sandbox",
     "start": "backstage-cli repo start",

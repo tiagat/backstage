@@ -3,4 +3,3 @@ helmChart:
   chartName: redis
   chartVersion: 18.2.0
   releaseName: redis
-  namespace: default

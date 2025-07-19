@@ -1,4 +1,6 @@
 deployments:
-  - path: namespaces
-  - path: external-secrets
-  - path: redis
+  - path: ./
+  - barrier: true
+  - include: charts
+  # - include: operators
+  # - barrier: true
