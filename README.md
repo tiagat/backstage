@@ -12,8 +12,23 @@
 - `yarn` [Installation](https://yarnpkg.com/getting-started/install)
     - Backstage currently uses Yarn 4.4.1, once you've ran corepack enable you'll want to then run yarn set version 4.4.1
 
+- [OrbStack](https://docs.orbstack.dev) - supercharged alternative to Docker Desktop
+    - [installing as a Homebrew Cask](https://docs.orbstack.dev/quick-start) 
+
+- [Kind](https://kind.sigs.k8s.io) - tool for running local Kubernetes clusters using Docker
+    - [Installing With A Package Manager](https://kind.sigs.k8s.io/docs/user/quick-start/#installing-with-a-package-manager)
+
+- [Kluctl](https://kluctl.io) - Kubernetes deployments
+    - [Installing the CLI](https://kluctl.io/docs/kluctl/installation/#installation-with-homebrew)
+
+- [Skaffold](https://skaffold.dev) - handles the workflow for building, pushing and deploying your application
+    - [Installing Skaffold](https://skaffold.dev/docs/install/#homebrew)
+
 - [Helm](https://helm.sh) - package manager for Kubernetes
     - [Installing Helm](https://helm.sh/docs/intro/install/#through-package-managers) 
+
+- [kubectl](https://kubernetes.io/docs/tasks/tools/) - Kubernetes command-line tool
+    - [Install with Homebrew on macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos)
 
 
 ## Getting Started
