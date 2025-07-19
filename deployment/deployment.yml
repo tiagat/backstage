@@ -1,2 +1,4 @@
 deployments:
+  - path: namespaces
+  - path: external-secrets
   - path: redis
