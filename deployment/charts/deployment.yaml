@@ -1,4 +1,5 @@
 deployments:
   - path: redis
+  - path: postgresql
 
 overrideNamespace: "backstage"

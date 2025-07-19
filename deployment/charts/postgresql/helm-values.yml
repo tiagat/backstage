@@ -1,0 +1,19 @@
+architecture: standalone
+
+auth:
+  enabled: true
+  enablePostgresUser: true
+
+  existingSecret: postgresql-credentials
+  secretKeys:
+    adminPasswordKey: POSTGRESQL_PASSWORD
+    userPasswordKey: POSTGRESQL_PASSWORD
+    replicationPasswordKey: POSTGRESQL_PASSWORD
+
+primary:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      memory: 256Mi
