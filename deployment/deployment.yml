@@ -2,5 +2,3 @@ deployments:
   - path: ./
   - barrier: true
   - include: charts
-  # - include: operators
-  # - barrier: true

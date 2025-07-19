@@ -1,4 +1,0 @@
-deployments:
-  - path: external-secrets
-
-overrideNamespace: "operators"
