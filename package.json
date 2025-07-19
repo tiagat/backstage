@@ -6,8 +6,10 @@
     "node": "20 || 22"
   },
   "scripts": {
+    "kluctl:pull": "dotenv -- kluctl helm-pull",
+    "kluctl:deploy": "dotenv -- kluctl deploy -t kind --prune --yes",
     "cluster:create": "kind create cluster --config kind-sandbox.yaml",
-    "cluster:deploy": "kluctl helm-pull && kluctl deploy -t kind --prune --yes",
+    "cluster:deploy": "yarn kluctl:pull && yarn kluctl:deploy",
     "cluster:start": "yarn cluster:create && yarn cluster:deploy",
     "cluster:stop": "kind delete cluster --name sandbox",
     "start": "backstage-cli repo start",
@@ -54,5 +56,8 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@4.4.1"
+  "packageManager": "yarn@4.4.1",
+  "dependencies": {
+    "dotenv-cli": "^8.0.0"
+  }
 }
