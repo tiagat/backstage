@@ -1,0 +1,12 @@
+architecture: standalone
+# auth:
+#   enabled: true
+#   existingSecret: 'env-redis'
+#   existingSecretPasswordKey: REDIS_PASSWORD
+master:
+  resources:
+    requests:
+      cpu: 0.5
+      memory: 512Mi
+    limits:
+      memory: 1Gi

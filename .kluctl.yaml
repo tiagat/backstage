@@ -1,0 +1,9 @@
+discriminator: "kind-sandbox"
+
+targets:
+  - name: kind
+    context: kind-sandbox
+    args:
+      environment: development
+args:
+  - name: environment

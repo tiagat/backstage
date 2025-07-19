@@ -1,0 +1,7 @@
+helmChart:
+  repo: https://charts.bitnami.com/bitnami
+  chartName: redis
+  chartVersion: 18.2.0
+  releaseName: redis
+  namespace: default
+  skipPrePull: true

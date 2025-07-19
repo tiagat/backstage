@@ -6,6 +6,10 @@
     "node": "20 || 22"
   },
   "scripts": {
+    "cluster:create": "kind create cluster --config kind-sandbox.yaml",
+    "cluster:deploy": "kluctl deploy -t kind --yes",
+    "cluster:start": "yarn cluster:create && yarn cluster:deploy",
+    "cluster:stop": "kind delete cluster --name sandbox",
     "start": "backstage-cli repo start",
     "build:backend": "yarn workspace backend build",
     "build:all": "backstage-cli repo build --all",
