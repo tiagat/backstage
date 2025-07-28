@@ -44,3 +44,17 @@ The documentation of Backstage includes:
 - [Architecture (Decisions)](https://backstage.io/docs/overview/architecture-overview)
 - [Designing for Backstage](https://backstage.io/docs/dls/design)
 - [Storybook - UI components](https://backstage.io/storybook)
+
+
+## Development environment
+
+For local development, used kind cluster
+
+- To create the cluster:
+  ```bash
+  yarn cluster:start
+  ```
+- To delete the cluster:
+  ```bash
+  yarn cluster:stop
+  ```
